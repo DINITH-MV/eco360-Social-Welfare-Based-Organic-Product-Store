@@ -1,0 +1,31 @@
+2024-08-02T16:52:33.572Z P:36500 T:21912] SyncServiceImpl::Initialize,SyncState after the account was authenticated: NotSignedIn
+2024-08-02T16:52:35.307Z P:36500 T:35628] SyncManagerImpl::ConfigureSyncer,Types to download: Encryption Keys
+2024-08-02T16:52:39.220Z P:36500 T:21912] ModelLoadManager::Configure,Desired: Device Info, User Consents, Send Tab To Self, Encryption Keys preferred: Device Info, User Consents, Send Tab To Self, Encryption Keys
+2024-08-02T16:52:39.220Z P:36500 T:21912] ModelLoadManager::LoadDesiredTypes,Desired: Device Info, User Consents, Send Tab To Self
+2024-08-02T16:52:39.223Z P:36500 T:21912] ModelLoadManager::ModelLoadCallback,Load Device Info: success
+2024-08-02T16:52:39.223Z P:36500 T:21912] ModelLoadManager::ModelLoadCallback,Load User Consents: success
+2024-08-02T16:52:39.223Z P:36500 T:21912] ModelLoadManager::ModelLoadCallback,Load Send Tab To Self: success
+2024-08-02T16:52:39.223Z P:36500 T:21912] ModelLoadManager::NotifyDelegateIfReadyForConfigure,All data types are ready for configuration
+2024-08-02T16:52:39.223Z P:36500 T:21912] DataTypeManagerImpl::OnAllDataTypesReadyForConfigure,All data types are ready for configuration
+2024-08-02T16:52:39.223Z P:36500 T:21912] DataTypeManagerImpl::StartNextConfiguration,Size: 3 front: Encryption Keys
+2024-08-02T16:52:39.223Z P:36500 T:21912] DataTypeManagerImpl::PrepareConfigureParams,Add types: 
+2024-08-02T16:52:40.086Z P:36500 T:35628] SyncManagerImpl::ConfigureSyncer,Types to download: 
+2024-08-02T16:52:40.088Z P:36500 T:21912] DataTypeManagerImpl::ConfigurationCompleted,Reconfigure
+2024-08-02T16:52:40.088Z P:36500 T:21912] ModelLoadManager::Configure,Desired: Device Info, User Consents, Send Tab To Self, Encryption Keys preferred: Device Info, User Consents, Send Tab To Self, Encryption Keys
+2024-08-02T16:52:40.088Z P:36500 T:21912] ModelLoadManager::LoadDesiredTypes,Desired: Device Info, User Consents, Send Tab To Self
+2024-08-02T16:52:40.088Z P:36500 T:21912] ModelLoadManager::NotifyDelegateIfReadyForConfigure,All data types are ready for configuration
+2024-08-02T16:52:40.088Z P:36500 T:21912] DataTypeManagerImpl::OnAllDataTypesReadyForConfigure,All data types are ready for configuration
+2024-08-02T16:52:40.088Z P:36500 T:21912] DataTypeManagerImpl::StartNextConfiguration,Size: 3 front: Encryption Keys
+2024-08-02T16:52:40.088Z P:36500 T:21912] DataTypeManagerImpl::PrepareConfigureParams,Add types: 
+2024-08-02T16:52:40.088Z P:36500 T:35628] SyncManagerImpl::ConfigureSyncer,Types to download: 
+2024-08-02T16:52:40.088Z P:36500 T:21912] DataTypeManagerImpl::ConfigurationCompleted,Left: 2
+2024-08-02T16:52:40.088Z P:36500 T:21912] DataTypeManagerImpl::StartNextConfiguration,Size: 2 front: Device Info, Send Tab To Self
+2024-08-02T16:52:40.088Z P:36500 T:21912] DataTypeManagerImpl::PrepareConfigureParams,Add types: Device Info, Send Tab To Self, Encryption Keys
+2024-08-02T16:52:40.088Z P:36500 T:35628] SyncManagerImpl::ConfigureSyncer,Types to download: Device Info, Send Tab To Self, Encryption Keys
+2024-08-02T16:52:40.485Z P:36500 T:21912] DataTypeManagerImpl::ConfigurationCompleted,Left: 1
+2024-08-02T16:52:40.486Z P:36500 T:21912] DataTypeManagerImpl::StartNextConfiguration,Size: 1 front: User Consents
+2024-08-02T16:52:40.486Z P:36500 T:21912] DataTypeManagerImpl::PrepareConfigureParams,Add types: 
+2024-08-02T16:52:40.486Z P:36500 T:35628] SyncManagerImpl::ConfigureSyncer,Types to download: 
+2024-08-02T16:52:40.488Z P:36500 T:21912] DataTypeManagerImpl::ConfigurationCompleted,Left: 0
+2024-08-02T16:52:41.742Z P:36500 T:35628] Commit::PostAndProcessResponse,Device Info: Success
+2024-08-02T16:52:41.742Z P:36500 T:35628] Commit::PostAndProcessResponse,User Consents: Success
