@@ -1,7 +1,7 @@
 import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '../../core/theme.dart';
+import '../../core/util.dart';
+import '../../core/widgets.dart';
 import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +62,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     width: 378.0,
                     height: 220.0,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      color: eco360Theme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(24.0),
                         bottomRight: Radius.circular(0.0),
@@ -115,7 +115,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   4.0, 7.0, 0.0, 10.0),
                               child: Text(
                                 'NEW ARRIVALS',
-                                style: FlutterFlowTheme.of(context)
+                                style: eco360Theme
+                                    .of(context)
                                     .labelMedium
                                     .override(
                                       fontFamily: 'Ubuntu',
@@ -327,8 +328,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         20.0, 5.0, 20.0, 0.0),
                                                 child: Text(
                                                   rowProductsRecord.name,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
+                                                  style: eco360Theme
+                                                      .of(context)
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily:
@@ -363,8 +364,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           ),
                                                           '\$20.00',
                                                         ),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
+                                                        style: eco360Theme
+                                                            .of(context)
                                                             .labelSmall
                                                             .override(
                                                               fontFamily:
@@ -380,8 +381,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                             ),
                                                       )
                                                     ],
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
+                                                    style: eco360Theme
+                                                        .of(context)
                                                         .labelMedium
                                                         .override(
                                                           fontFamily: 'Outfit',
@@ -421,13 +422,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             24.0, 27.0, 0.0, 16.0),
                         child: Text(
                           'CATEGORIES',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    fontSize: 18.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w600,
-                                  ),
+                          style: eco360Theme.of(context).bodyMedium.override(
+                                fontFamily: 'Readex Pro',
+                                fontSize: 18.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w600,
+                              ),
                         ),
                       ),
                       Padding(
@@ -560,8 +560,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 Text(
                                                   gridViewCatogoriesRecord.name,
                                                   textAlign: TextAlign.center,
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
+                                                  style: eco360Theme
+                                                      .of(context)
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily:
@@ -604,8 +604,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             width: double.infinity,
                             height: 220.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
+                              color:
+                                  eco360Theme.of(context).secondaryBackground,
                               borderRadius: BorderRadius.circular(16.0),
                               border: Border.all(
                                 color: Color(0xFF598842),

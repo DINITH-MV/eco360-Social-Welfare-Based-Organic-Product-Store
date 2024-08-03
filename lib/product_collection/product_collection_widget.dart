@@ -1,8 +1,8 @@
 import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '../core/icon_button.dart';
+import '../core/theme.dart';
+import '../core/util.dart';
+import '../core/widgets.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -56,7 +56,7 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: eco360Theme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Column(
@@ -96,7 +96,7 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                           children: [
                             Align(
                               alignment: AlignmentDirectional(-1.0, 0.0),
-                              child: FlutterFlowIconButton(
+                              child: eco360IconButton(
                                 borderColor: Colors.transparent,
                                 borderRadius: 30.0,
                                 borderWidth: 1.0,
@@ -122,13 +122,14 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                                     children: [
                                       TextSpan(
                                         text: columnCatogoriesRecord.name,
-                                        style: FlutterFlowTheme.of(context)
+                                        style: eco360Theme
+                                            .of(context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: eco360Theme
+                                                  .of(context)
+                                                  .primary,
                                               fontSize: 18.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
@@ -139,7 +140,8 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                                         style: TextStyle(),
                                       )
                                     ],
-                                    style: FlutterFlowTheme.of(context)
+                                    style: eco360Theme
+                                        .of(context)
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
@@ -161,7 +163,7 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                 width: double.infinity,
                 height: 100.0,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  color: eco360Theme.of(context).secondaryBackground,
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
@@ -177,52 +179,49 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                           obscureText: false,
                           decoration: InputDecoration(
                             labelText: 'Label here...',
-                            labelStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  letterSpacing: 0.0,
-                                ),
-                            hintStyle: FlutterFlowTheme.of(context)
-                                .labelMedium
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  letterSpacing: 0.0,
-                                ),
+                            labelStyle:
+                                eco360Theme.of(context).labelMedium.override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
+                            hintStyle:
+                                eco360Theme.of(context).labelMedium.override(
+                                      fontFamily: 'Readex Pro',
+                                      letterSpacing: 0.0,
+                                    ),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).alternate,
+                                color: eco360Theme.of(context).alternate,
                                 width: 2.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: eco360Theme.of(context).primary,
                                 width: 2.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             errorBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).error,
+                                color: eco360Theme.of(context).error,
                                 width: 2.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedErrorBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).error,
+                                color: eco360Theme.of(context).error,
                                 width: 2.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
+                          style: eco360Theme.of(context).bodyMedium.override(
+                                fontFamily: 'Readex Pro',
+                                letterSpacing: 0.0,
+                              ),
                           validator: _model.textControllerValidator
                               .asValidator(context),
                         ),
@@ -231,14 +230,14 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
-                      child: FlutterFlowIconButton(
+                      child: eco360IconButton(
                         borderRadius: 7.0,
                         borderWidth: 1.0,
                         buttonSize: 40.0,
                         fillColor: Color(0xFFFFB3B3),
                         icon: Icon(
                           Icons.clear,
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: eco360Theme.of(context).primaryText,
                           size: 24.0,
                         ),
                         onPressed: () {
@@ -260,7 +259,7 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                           EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 8.0),
                       child: Text(
                         'Search results',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: eco360Theme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
                               letterSpacing: 0.0,
                             ),
@@ -300,8 +299,8 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                             width: double.infinity,
                             height: 600.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
+                              color:
+                                  eco360Theme.of(context).secondaryBackground,
                             ),
                             child: StreamBuilder<List<ProductsRecord>>(
                               stream: queryProductsRecord(
@@ -360,7 +359,8 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                                             gridViewIndex];
                                     return Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                                      color: FlutterFlowTheme.of(context)
+                                      color: eco360Theme
+                                          .of(context)
                                           .secondaryBackground,
                                       elevation: 4.0,
                                       shape: RoundedRectangleBorder(
@@ -396,14 +396,13 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                                               child: Text(
                                                 gridViewProductsRecord.name,
                                                 textAlign: TextAlign.center,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                style: eco360Theme
+                                                    .of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      letterSpacing: 0.0,
+                                                    ),
                                               ),
                                             ),
                                           ),
@@ -428,14 +427,13 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                                                   '\$20',
                                                 ),
                                                 textAlign: TextAlign.center,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                style: eco360Theme
+                                                    .of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      letterSpacing: 0.0,
+                                                    ),
                                               ),
                                             ),
                                           ),

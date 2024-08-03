@@ -1,8 +1,8 @@
 import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '../core/icon_button.dart';
+import '../core/theme.dart';
+import '../core/util.dart';
+import '../core/widgets.dart';
 import 'product_collection_widget.dart' show ProductCollectionWidget;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/gestures.dart';
@@ -11,7 +11,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ProductCollectionModel extends FlutterFlowModel<ProductCollectionWidget> {
+class ProductCollectionModel extends eco360Model<ProductCollectionWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

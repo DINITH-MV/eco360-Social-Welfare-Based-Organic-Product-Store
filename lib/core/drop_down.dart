@@ -4,8 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'form_field_controller.dart';
 import 'package:flutter/material.dart';
 
-class FlutterFlowDropDown<T> extends StatefulWidget {
-  const FlutterFlowDropDown({
+class eco360DropDown<T> extends StatefulWidget {
+  const eco360DropDown({
     super.key,
     this.controller,
     this.multiSelectController,
@@ -81,10 +81,10 @@ class FlutterFlowDropDown<T> extends StatefulWidget {
   final TextStyle? labelTextStyle;
 
   @override
-  State<FlutterFlowDropDown<T>> createState() => _FlutterFlowDropDownState<T>();
+  State<eco360DropDown<T>> createState() => _eco360DropDownState<T>();
 }
 
-class _FlutterFlowDropDownState<T> extends State<FlutterFlowDropDown<T>> {
+class _eco360DropDownState<T> extends State<eco360DropDown<T>> {
   bool get isMultiSelect => widget.isMultiSelect;
   FormFieldController<T?> get controller => widget.controller!;
   FormFieldController<List<T>?> get multiSelectController =>

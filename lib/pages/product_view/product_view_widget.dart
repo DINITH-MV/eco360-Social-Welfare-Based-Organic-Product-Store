@@ -1,13 +1,13 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_count_controller.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
+import '../../core/count_controller.dart';
+import '../../core/drop_down.dart';
+import '../../core/icon_button.dart';
+import '../../core/theme.dart';
+import '../../core/util.dart';
+import '../../core/widgets.dart';
+import '../../core/form_field_controller.dart';
+import '../../core/custom_functions.dart' as functions;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -57,7 +57,7 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: eco360Theme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Column(
@@ -112,7 +112,7 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 50.0, 0.0, 0.0),
-                                        child: FlutterFlowIconButton(
+                                        child: eco360IconButton(
                                           borderColor: Colors.transparent,
                                           borderRadius: 30.0,
                                           borderWidth: 1.0,
@@ -135,7 +135,7 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 50.0, 0.0, 0.0),
-                                        child: FlutterFlowIconButton(
+                                        child: eco360IconButton(
                                           borderColor: Colors.transparent,
                                           borderRadius: 30.0,
                                           borderWidth: 1.0,
@@ -162,12 +162,11 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                 0.0, 20.0, 0.0, 0.0),
                             child: Text(
                               columnProductsRecord.name,
-                              style: FlutterFlowTheme.of(context)
-                                  .titleLarge
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    letterSpacing: 0.0,
-                                  ),
+                              style:
+                                  eco360Theme.of(context).titleLarge.override(
+                                        fontFamily: 'Outfit',
+                                        letterSpacing: 0.0,
+                                      ),
                             ),
                           ),
                           Padding(
@@ -176,12 +175,11 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                             child: Text(
                               columnProductsRecord.description,
                               textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    letterSpacing: 0.0,
-                                  ),
+                              style:
+                                  eco360Theme.of(context).labelMedium.override(
+                                        fontFamily: 'Readex Pro',
+                                        letterSpacing: 0.0,
+                                      ),
                             ),
                           ),
                           Padding(
@@ -220,13 +218,14 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                   width: 365.0,
                                   height: 62.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: eco360Theme
+                                        .of(context)
                                         .secondaryBackground,
                                     boxShadow: [
                                       BoxShadow(
                                         blurRadius: 0.0,
-                                        color: FlutterFlowTheme.of(context)
-                                            .alternate,
+                                        color:
+                                            eco360Theme.of(context).alternate,
                                         offset: Offset(
                                           0.0,
                                           1.0,
@@ -244,7 +243,7 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                     mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      FlutterFlowDropDown<String>(
+                                      eco360DropDown<String>(
                                         controller: _model
                                                 .dropDownValueController1 ??=
                                             FormFieldController<String>(null),
@@ -260,7 +259,8 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                             () => _model.dropDownValue1 = val),
                                         width: 365.0,
                                         height: 56.0,
-                                        textStyle: FlutterFlowTheme.of(context)
+                                        textStyle: eco360Theme
+                                            .of(context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
@@ -269,11 +269,13 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                         hintText: 'Colour',
                                         icon: Icon(
                                           Icons.keyboard_arrow_down_rounded,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: eco360Theme
+                                              .of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
-                                        fillColor: FlutterFlowTheme.of(context)
+                                        fillColor: eco360Theme
+                                            .of(context)
                                             .secondaryBackground,
                                         elevation: 2.0,
                                         borderColor: Colors.transparent,
@@ -328,13 +330,14 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                   width: 365.0,
                                   height: 60.0,
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
+                                    color: eco360Theme
+                                        .of(context)
                                         .secondaryBackground,
                                     boxShadow: [
                                       BoxShadow(
                                         blurRadius: 0.0,
-                                        color: FlutterFlowTheme.of(context)
-                                            .alternate,
+                                        color:
+                                            eco360Theme.of(context).alternate,
                                         offset: Offset(
                                           0.0,
                                           1.0,
@@ -346,7 +349,7 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                     mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      FlutterFlowDropDown<String>(
+                                      eco360DropDown<String>(
                                         controller: _model
                                                 .dropDownValueController2 ??=
                                             FormFieldController<String>(null),
@@ -360,7 +363,8 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                             () => _model.dropDownValue2 = val),
                                         width: 365.0,
                                         height: 56.0,
-                                        textStyle: FlutterFlowTheme.of(context)
+                                        textStyle: eco360Theme
+                                            .of(context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
@@ -370,11 +374,13 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                         hintText: 'Size',
                                         icon: Icon(
                                           Icons.keyboard_arrow_down_rounded,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: eco360Theme
+                                              .of(context)
                                               .secondaryText,
                                           size: 24.0,
                                         ),
-                                        fillColor: FlutterFlowTheme.of(context)
+                                        fillColor: eco360Theme
+                                            .of(context)
                                             .secondaryBackground,
                                         elevation: 2.0,
                                         borderColor: Colors.transparent,
@@ -397,12 +403,12 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                             width: 365.0,
                             height: 62.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
+                              color:
+                                  eco360Theme.of(context).secondaryBackground,
                               boxShadow: [
                                 BoxShadow(
                                   blurRadius: 0.0,
-                                  color: FlutterFlowTheme.of(context).alternate,
+                                  color: eco360Theme.of(context).alternate,
                                   offset: Offset(
                                     0.0,
                                     1.0,
@@ -429,7 +435,8 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                         14.0, 0.0, 0.0, 0.0),
                                     child: Text(
                                       'Quantity',
-                                      style: FlutterFlowTheme.of(context)
+                                      style: eco360Theme
+                                          .of(context)
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
@@ -443,7 +450,8 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                       width: 160.0,
                                       height: 47.0,
                                       decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
+                                        color: eco360Theme
+                                            .of(context)
                                             .secondaryBackground,
                                         borderRadius:
                                             BorderRadius.circular(8.0),
@@ -453,14 +461,16 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                           width: 1.0,
                                         ),
                                       ),
-                                      child: FlutterFlowCountController(
+                                      child: eco360CountController(
                                         decrementIconBuilder: (enabled) =>
                                             FaIcon(
                                           FontAwesomeIcons.minus,
                                           color: enabled
-                                              ? FlutterFlowTheme.of(context)
+                                              ? eco360Theme
+                                                  .of(context)
                                                   .secondaryText
-                                              : FlutterFlowTheme.of(context)
+                                              : eco360Theme
+                                                  .of(context)
                                                   .alternate,
                                           size: 20.0,
                                         ),
@@ -468,15 +478,16 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                             FaIcon(
                                           FontAwesomeIcons.plus,
                                           color: enabled
-                                              ? FlutterFlowTheme.of(context)
-                                                  .primary
-                                              : FlutterFlowTheme.of(context)
+                                              ? eco360Theme.of(context).primary
+                                              : eco360Theme
+                                                  .of(context)
                                                   .alternate,
                                           size: 20.0,
                                         ),
                                         countBuilder: (count) => Text(
                                           count.toString(),
-                                          style: FlutterFlowTheme.of(context)
+                                          style: eco360Theme
+                                              .of(context)
                                               .titleLarge
                                               .override(
                                                 fontFamily: 'Outfit',
@@ -583,7 +594,8 @@ class _ProductViewWidgetState extends State<ProductViewWidget> {
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Text(
                                           'Add to Cart',
-                                          style: FlutterFlowTheme.of(context)
+                                          style: eco360Theme
+                                              .of(context)
                                               .titleMedium
                                               .override(
                                                 fontFamily: 'Readex Pro',

@@ -1,9 +1,9 @@
 import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
+import '../../core/icon_button.dart';
+import '../../core/theme.dart';
+import '../../core/util.dart';
+import '../../core/widgets.dart';
+import '../../core/custom_functions.dart' as functions;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -57,19 +57,19 @@ class _CartWidgetState extends State<CartWidget> {
 
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: eco360Theme.of(context).primaryBackground,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(40.0),
         child: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+          backgroundColor: eco360Theme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
-          leading: FlutterFlowIconButton(
+          leading: eco360IconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             buttonSize: 46.0,
             icon: Icon(
               Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.of(context).secondaryText,
+              color: eco360Theme.of(context).secondaryText,
               size: 25.0,
             ),
             onPressed: () async {
@@ -104,7 +104,7 @@ class _CartWidgetState extends State<CartWidget> {
                         maxWidth: 750.0,
                       ),
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: eco360Theme.of(context).secondaryBackground,
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 4.0,
@@ -125,19 +125,19 @@ class _CartWidgetState extends State<CartWidget> {
                           children: [
                             Text(
                               'Your Cart',
-                              style: FlutterFlowTheme.of(context)
-                                  .titleLarge
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    letterSpacing: 0.0,
-                                  ),
+                              style:
+                                  eco360Theme.of(context).titleLarge.override(
+                                        fontFamily: 'Outfit',
+                                        letterSpacing: 0.0,
+                                      ),
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 0.0, 12.0),
                               child: Text(
                                 'Below is the list of items in your cart.',
-                                style: FlutterFlowTheme.of(context)
+                                style: eco360Theme
+                                    .of(context)
                                     .labelMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
@@ -181,14 +181,15 @@ class _CartWidgetState extends State<CartWidget> {
                                                 1.0,
                                         height: 137.0,
                                         decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
+                                          color: eco360Theme
+                                              .of(context)
                                               .secondaryBackground,
                                           boxShadow: [
                                             BoxShadow(
                                               blurRadius: 0.0,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
+                                              color: eco360Theme
+                                                  .of(context)
+                                                  .alternate,
                                               offset: Offset(
                                                 0.0,
                                                 1.0,
@@ -201,7 +202,8 @@ class _CartWidgetState extends State<CartWidget> {
                                         child: Card(
                                           clipBehavior:
                                               Clip.antiAliasWithSaveLayer,
-                                          color: FlutterFlowTheme.of(context)
+                                          color: eco360Theme
+                                              .of(context)
                                               .secondaryBackground,
                                           elevation: 4.0,
                                           shape: RoundedRectangleBorder(
@@ -298,7 +300,8 @@ class _CartWidgetState extends State<CartWidget> {
                                                                             Text(
                                                                           listViewCartRecord
                                                                               .productName,
-                                                                          style: FlutterFlowTheme.of(context)
+                                                                          style: eco360Theme
+                                                                              .of(context)
                                                                               .titleLarge
                                                                               .override(
                                                                                 fontFamily: 'Outfit',
@@ -320,7 +323,8 @@ class _CartWidgetState extends State<CartWidget> {
                                                                               .toString(),
                                                                           textAlign:
                                                                               TextAlign.end,
-                                                                          style: FlutterFlowTheme.of(context)
+                                                                          style: eco360Theme
+                                                                              .of(context)
                                                                               .titleLarge
                                                                               .override(
                                                                                 fontFamily: 'Outfit',
@@ -339,7 +343,7 @@ class _CartWidgetState extends State<CartWidget> {
                                                                   AlignmentDirectional(
                                                                       1.0, 0.0),
                                                               child:
-                                                                  FlutterFlowIconButton(
+                                                                  eco360IconButton(
                                                                 borderRadius:
                                                                     7.0,
                                                                 buttonSize:
@@ -406,16 +410,15 @@ class _CartWidgetState extends State<CartWidget> {
                                                             style: TextStyle(),
                                                           )
                                                         ],
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelSmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
+                                                        style: eco360Theme
+                                                            .of(context)
+                                                            .labelSmall
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Readex Pro',
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
                                                       ),
                                                     ),
                                                   ),
@@ -445,16 +448,15 @@ class _CartWidgetState extends State<CartWidget> {
                                                             style: TextStyle(),
                                                           )
                                                         ],
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelSmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
+                                                        style: eco360Theme
+                                                            .of(context)
+                                                            .labelSmall
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Readex Pro',
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
                                                       ),
                                                     ),
                                                   ),
@@ -485,16 +487,15 @@ class _CartWidgetState extends State<CartWidget> {
                                                             style: TextStyle(),
                                                           )
                                                         ],
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelSmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
+                                                        style: eco360Theme
+                                                            .of(context)
+                                                            .labelSmall
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Readex Pro',
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
                                                       ),
                                                     ),
                                                   ),
@@ -519,7 +520,7 @@ class _CartWidgetState extends State<CartWidget> {
                         maxWidth: 430.0,
                       ),
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: eco360Theme.of(context).secondaryBackground,
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 4.0,
@@ -541,19 +542,19 @@ class _CartWidgetState extends State<CartWidget> {
                           children: [
                             Text(
                               'Order Summary',
-                              style: FlutterFlowTheme.of(context)
-                                  .titleLarge
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    letterSpacing: 0.0,
-                                  ),
+                              style:
+                                  eco360Theme.of(context).titleLarge.override(
+                                        fontFamily: 'Outfit',
+                                        letterSpacing: 0.0,
+                                      ),
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 4.0, 0.0, 12.0),
                               child: Text(
                                 'Below is a list of your items.',
-                                style: FlutterFlowTheme.of(context)
+                                style: eco360Theme
+                                    .of(context)
                                     .labelMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
@@ -564,7 +565,7 @@ class _CartWidgetState extends State<CartWidget> {
                             Divider(
                               height: 32.0,
                               thickness: 2.0,
-                              color: FlutterFlowTheme.of(context).alternate,
+                              color: eco360Theme.of(context).alternate,
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -578,7 +579,8 @@ class _CartWidgetState extends State<CartWidget> {
                                         0.0, 0.0, 0.0, 12.0),
                                     child: Text(
                                       'Price Breakdown',
-                                      style: FlutterFlowTheme.of(context)
+                                      style: eco360Theme
+                                          .of(context)
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
@@ -596,13 +598,14 @@ class _CartWidgetState extends State<CartWidget> {
                                       children: [
                                         Text(
                                           'Base Price',
-                                          style: FlutterFlowTheme.of(context)
+                                          style: eco360Theme
+                                              .of(context)
                                               .bodySmall
                                               .override(
                                                 fontFamily: 'Outfit',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
+                                                color: eco360Theme
+                                                    .of(context)
+                                                    .secondaryText,
                                                 fontSize: 14.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.normal,
@@ -620,7 +623,8 @@ class _CartWidgetState extends State<CartWidget> {
                                             '\$0',
                                           ),
                                           textAlign: TextAlign.end,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: eco360Theme
+                                              .of(context)
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Readex Pro',
@@ -640,13 +644,14 @@ class _CartWidgetState extends State<CartWidget> {
                                       children: [
                                         Text(
                                           'Taxes',
-                                          style: FlutterFlowTheme.of(context)
+                                          style: eco360Theme
+                                              .of(context)
                                               .bodySmall
                                               .override(
                                                 fontFamily: 'Outfit',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
+                                                color: eco360Theme
+                                                    .of(context)
+                                                    .secondaryText,
                                                 fontSize: 14.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.normal,
@@ -665,7 +670,8 @@ class _CartWidgetState extends State<CartWidget> {
                                             '\$0',
                                           ),
                                           textAlign: TextAlign.end,
-                                          style: FlutterFlowTheme.of(context)
+                                          style: eco360Theme
+                                              .of(context)
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Readex Pro',
@@ -688,29 +694,29 @@ class _CartWidgetState extends State<CartWidget> {
                                           children: [
                                             Text(
                                               'Total',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              style: eco360Theme
+                                                  .of(context)
                                                   .titleMedium
                                                   .override(
                                                     fontFamily: 'Outfit',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
+                                                    color: eco360Theme
+                                                        .of(context)
                                                         .secondaryText,
                                                     fontSize: 20.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
                                                   ),
                                             ),
-                                            FlutterFlowIconButton(
+                                            eco360IconButton(
                                               borderColor: Colors.transparent,
                                               borderRadius: 30.0,
                                               borderWidth: 1.0,
                                               buttonSize: 36.0,
                                               icon: Icon(
                                                 Icons.info_outlined,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
+                                                color: eco360Theme
+                                                    .of(context)
+                                                    .secondaryText,
                                                 size: 18.0,
                                               ),
                                               onPressed: () {
@@ -731,7 +737,8 @@ class _CartWidgetState extends State<CartWidget> {
                                             ),
                                             '\$0',
                                           ),
-                                          style: FlutterFlowTheme.of(context)
+                                          style: eco360Theme
+                                              .of(context)
                                               .displaySmall
                                               .override(
                                                 fontFamily: 'Outfit',
@@ -755,27 +762,24 @@ class _CartWidgetState extends State<CartWidget> {
                                 padding: EdgeInsets.all(0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: FlutterFlowTheme.of(context).primary,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .titleSmall
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      letterSpacing: 0.0,
-                                    ),
+                                color: eco360Theme.of(context).primary,
+                                textStyle:
+                                    eco360Theme.of(context).titleSmall.override(
+                                          fontFamily: 'Readex Pro',
+                                          letterSpacing: 0.0,
+                                        ),
                                 elevation: 2.0,
                                 borderSide: BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(50.0),
-                                hoverColor:
-                                    FlutterFlowTheme.of(context).accent1,
+                                hoverColor: eco360Theme.of(context).accent1,
                                 hoverBorderSide: BorderSide(
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: eco360Theme.of(context).primary,
                                   width: 1.0,
                                 ),
-                                hoverTextColor:
-                                    FlutterFlowTheme.of(context).primary,
+                                hoverTextColor: eco360Theme.of(context).primary,
                               ),
                             ),
                           ],
