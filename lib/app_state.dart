@@ -36,6 +36,12 @@ class FFAppState extends ChangeNotifier {
     _sum = value;
     prefs.setDouble('ff_sum', value);
   }
+
+  bool _searchActive = false;
+  bool get searchActive => _searchActive;
+  set searchActive(bool value) {
+    _searchActive = value;
+  }
 }
 
 void _safeInit(Function() initializeField) {

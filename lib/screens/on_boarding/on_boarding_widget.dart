@@ -54,7 +54,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget> {
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    context.pushNamed('HomePage');
+                    context.pushNamed('Home');
                   },
                   text: 'Button',
                   options: FFButtonOptions(

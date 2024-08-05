@@ -71,7 +71,7 @@ class _CartWidgetState extends State<CartWidget> {
               size: 25.0,
             ),
             onPressed: () async {
-              context.pushNamed('HomePage');
+              context.pushNamed('Home');
             },
           ),
           actions: [],

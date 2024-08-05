@@ -90,28 +90,22 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
                             ),
                           );
                         }
-                        List<CatogoriesRecord> gridViewCatogoriesRecordList =
+                        List<CatogoriesRecord> wrapCatogoriesRecordList =
                             snapshot.data!;
 
-                        return GridView.builder(
-                          padding: EdgeInsets.fromLTRB(
-                            0,
-                            0.0,
-                            0,
-                            0,
-                          ),
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 3,
-                            crossAxisSpacing: 10.0,
-                            mainAxisSpacing: 10.0,
-                            childAspectRatio: 1.0,
-                          ),
-                          scrollDirection: Axis.vertical,
-                          itemCount: gridViewCatogoriesRecordList.length,
-                          itemBuilder: (context, gridViewIndex) {
-                            final gridViewCatogoriesRecord =
-                                gridViewCatogoriesRecordList[gridViewIndex];
+                        return Wrap(
+                          spacing: 8.0,
+                          runSpacing: 8.0,
+                          alignment: WrapAlignment.start,
+                          crossAxisAlignment: WrapCrossAlignment.start,
+                          direction: Axis.horizontal,
+                          runAlignment: WrapAlignment.start,
+                          verticalDirection: VerticalDirection.down,
+                          clipBehavior: Clip.none,
+                          children: List.generate(
+                              wrapCatogoriesRecordList.length, (wrapIndex) {
+                            final wrapCatogoriesRecord =
+                                wrapCatogoriesRecordList[wrapIndex];
                             return InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -122,15 +116,15 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
                                   'ProductCollection',
                                   queryParameters: {
                                     'collectionDetails': serializeParam(
-                                      gridViewCatogoriesRecord.reference,
+                                      wrapCatogoriesRecord.reference,
                                       ParamType.DocumentReference,
                                     ),
                                   }.withoutNulls,
                                 );
                               },
                               child: Container(
-                                width: 100.0,
-                                height: 100.0,
+                                width: 110.0,
+                                height: 120.0,
                                 decoration: BoxDecoration(
                                   color: Color(0xFFFFE8B6),
                                   borderRadius: BorderRadius.only(
@@ -147,43 +141,50 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
                                 child: Stack(
                                   alignment: AlignmentDirectional(0.0, 1.0),
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 18.0),
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(0.0),
-                                          bottomRight: Radius.circular(0.0),
-                                          topLeft: Radius.circular(10.0),
-                                          topRight: Radius.circular(10.0),
-                                        ),
-                                        child: Image.network(
-                                          valueOrDefault<String>(
-                                            gridViewCatogoriesRecord.image,
-                                            'https://i.pinimg.com/originals/0b/f5/af/0bf5af879d5a347c6c0b353a3af81526.png',
+                                    Align(
+                                      alignment:
+                                          AlignmentDirectional(0.0, -1.0),
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 4.0, 0.0, 0.0),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                          child: Image.network(
+                                            valueOrDefault<String>(
+                                              wrapCatogoriesRecord.image,
+                                              'https://i.pinimg.com/originals/0b/f5/af/0bf5af879d5a347c6c0b353a3af81526.png',
+                                            ),
+                                            width: 91.0,
+                                            height: 75.0,
+                                            fit: BoxFit.cover,
+                                            alignment: Alignment(0.0, -1.0),
                                           ),
-                                          width: 300.0,
-                                          height: 200.0,
-                                          fit: BoxFit.cover,
-                                          alignment: Alignment(0.0, -1.0),
                                         ),
                                       ),
                                     ),
-                                    Text(
-                                      gridViewCatogoriesRecord.name,
-                                      textAlign: TextAlign.center,
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            letterSpacing: 0.0,
-                                          ),
+                                    Align(
+                                      alignment: AlignmentDirectional(0.0, 1.0),
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 0.0, 7.0),
+                                        child: Text(
+                                          wrapCatogoriesRecord.name,
+                                          textAlign: TextAlign.center,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                letterSpacing: 0.0,
+                                              ),
+                                        ),
+                                      ),
                                     ),
                                   ],
                                 ),
                               ),
                             );
-                          },
+                          }),
                         );
                       },
                     ),

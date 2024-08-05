@@ -89,11 +89,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               appStateNotifier.loggedIn ? NavBarPage() : OnBoardingWidget(),
         ),
         FFRoute(
-          name: 'HomePage',
-          path: '/homePage',
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'HomePage')
-              : HomePageWidget(),
+          name: 'Home',
+          path: '/home',
+          builder: (context, params) =>
+              params.isEmpty ? NavBarPage(initialPage: 'Home') : HomeWidget(),
         ),
         FFRoute(
           name: 'ProductView',
@@ -163,6 +162,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'onBoarding',
           path: '/onBoarding',
           builder: (context, params) => OnBoardingWidget(),
+        ),
+        FFRoute(
+          name: 'AllProducts',
+          path: '/allProducts',
+          builder: (context, params) => AllProductsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

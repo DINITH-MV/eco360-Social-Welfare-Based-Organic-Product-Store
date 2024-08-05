@@ -297,7 +297,7 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                           final containerCatogoriesRecord = snapshot.data!;
 
                           return Container(
-                            width: double.infinity,
+                            width: 380.0,
                             height: 600.0,
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
@@ -335,29 +335,23 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                                     ),
                                   );
                                 }
-                                List<ProductsRecord>
-                                    gridViewProductsRecordList = snapshot.data!;
+                                List<ProductsRecord> wrapProductsRecordList =
+                                    snapshot.data!;
 
-                                return GridView.builder(
-                                  padding: EdgeInsets.fromLTRB(
-                                    0,
-                                    4.0,
-                                    0,
-                                    0,
-                                  ),
-                                  gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 2,
-                                    crossAxisSpacing: 2.0,
-                                    mainAxisSpacing: 4.0,
-                                    childAspectRatio: 1.0,
-                                  ),
-                                  scrollDirection: Axis.vertical,
-                                  itemCount: gridViewProductsRecordList.length,
-                                  itemBuilder: (context, gridViewIndex) {
-                                    final gridViewProductsRecord =
-                                        gridViewProductsRecordList[
-                                            gridViewIndex];
+                                return Wrap(
+                                  spacing: 0.0,
+                                  runSpacing: 0.0,
+                                  alignment: WrapAlignment.start,
+                                  crossAxisAlignment: WrapCrossAlignment.start,
+                                  direction: Axis.horizontal,
+                                  runAlignment: WrapAlignment.start,
+                                  verticalDirection: VerticalDirection.down,
+                                  clipBehavior: Clip.none,
+                                  children: List.generate(
+                                      wrapProductsRecordList.length,
+                                      (wrapIndex) {
+                                    final wrapProductsRecord =
+                                        wrapProductsRecordList[wrapIndex];
                                     return Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
                                       color: FlutterFlowTheme.of(context)
@@ -367,82 +361,108 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                       ),
-                                      child: Stack(
-                                        children: [
-                                          Align(
-                                            alignment:
-                                                AlignmentDirectional(0.0, -1.0),
-                                            child: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                              child: Image.network(
-                                                valueOrDefault<String>(
-                                                  gridViewProductsRecord.image,
-                                                  'https://i.pinimg.com/originals/0b/f5/af/0bf5af879d5a347c6c0b353a3af81526.png',
-                                                ),
-                                                width: 300.0,
-                                                height: 130.0,
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                          ),
-                                          Align(
-                                            alignment:
-                                                AlignmentDirectional(0.0, 1.0),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      20.0, 0.0, 20.0, 26.0),
-                                              child: Text(
-                                                gridViewProductsRecord.name,
-                                                textAlign: TextAlign.center,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                              ),
-                                            ),
-                                          ),
-                                          Align(
-                                            alignment:
-                                                AlignmentDirectional(0.0, 1.0),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      20.0, 0.0, 20.0, 5.0),
-                                              child: Text(
-                                                valueOrDefault<String>(
-                                                  formatNumber(
-                                                    gridViewProductsRecord
-                                                        .price,
-                                                    formatType:
-                                                        FormatType.decimal,
-                                                    decimalType: DecimalType
-                                                        .periodDecimal,
-                                                    currency: '',
+                                      child: Container(
+                                        width: 180.0,
+                                        height: 240.0,
+                                        child: Stack(
+                                          children: [
+                                            Align(
+                                              alignment: AlignmentDirectional(
+                                                  0.0, -1.0),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        0.0, 9.0, 0.0, 0.0),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                  child: Image.network(
+                                                    valueOrDefault<String>(
+                                                      wrapProductsRecord.image,
+                                                      'https://i.pinimg.com/originals/0b/f5/af/0bf5af879d5a347c6c0b353a3af81526.png',
+                                                    ),
+                                                    width: 160.0,
+                                                    height: 160.0,
+                                                    fit: BoxFit.cover,
                                                   ),
-                                                  '\$20',
                                                 ),
-                                                textAlign: TextAlign.center,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
                                               ),
                                             ),
-                                          ),
-                                        ],
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Flexible(
+                                                  child: Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.0, 1.0),
+                                                    child: Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
+                                                                  0.0,
+                                                                  44.0),
+                                                      child: Text(
+                                                        wrapProductsRecord.name,
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Align(
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 1.0),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        20.0, 0.0, 20.0, 13.0),
+                                                child: Text(
+                                                  valueOrDefault<String>(
+                                                    formatNumber(
+                                                      wrapProductsRecord.price,
+                                                      formatType:
+                                                          FormatType.decimal,
+                                                      decimalType: DecimalType
+                                                          .periodDecimal,
+                                                      currency: '',
+                                                    ),
+                                                    '\$20',
+                                                  ),
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     );
-                                  },
+                                  }),
                                 );
                               },
                             ),
