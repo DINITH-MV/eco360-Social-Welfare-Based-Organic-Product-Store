@@ -1,6 +1,7 @@
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/widgets/common/product_view_bottom_sheet/product_view_bottom_sheet_widget.dart';
 import 'products_widget.dart' show ProductsWidget;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';

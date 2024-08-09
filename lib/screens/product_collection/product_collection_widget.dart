@@ -51,9 +51,7 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus
-          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-          : FocusScope.of(context).unfocus(),
+      onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -80,7 +78,7 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                           width: 30.0,
                           height: 30.0,
                           child: SpinKitFadingCube(
-                            color: Color(0xFF226B1B),
+                            color: Color(0xFF79DD71),
                             size: 30.0,
                           ),
                         ),
@@ -287,7 +285,7 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                                 width: 30.0,
                                 height: 30.0,
                                 child: SpinKitFadingCube(
-                                  color: Color(0xFF226B1B),
+                                  color: Color(0xFF79DD71),
                                   size: 30.0,
                                 ),
                               ),
@@ -329,7 +327,7 @@ class _ProductCollectionWidgetState extends State<ProductCollectionWidget> {
                                       width: 30.0,
                                       height: 30.0,
                                       child: SpinKitFadingCube(
-                                        color: Color(0xFF226B1B),
+                                        color: Color(0xFF79DD71),
                                         size: 30.0,
                                       ),
                                     ),

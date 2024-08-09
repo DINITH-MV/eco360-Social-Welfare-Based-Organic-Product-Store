@@ -7,7 +7,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -33,12 +32,6 @@ class _AllProductsWidgetState extends State<AllProductsWidget> {
     super.initState();
     _model = createModel(context, () => AllProductsModel());
 
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      FFAppState().searchActive = false;
-      setState(() {});
-    });
-
     _model.textController ??= TextEditingController();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
@@ -53,8 +46,6 @@ class _AllProductsWidgetState extends State<AllProductsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return StreamBuilder<List<ProductsRecord>>(
       stream: queryProductsRecord(),
       builder: (context, snapshot) {
@@ -67,7 +58,7 @@ class _AllProductsWidgetState extends State<AllProductsWidget> {
                 width: 30.0,
                 height: 30.0,
                 child: SpinKitFadingCube(
-                  color: Color(0xFF226B1B),
+                  color: Color(0xFF79DD71),
                   size: 30.0,
                 ),
               ),
@@ -77,9 +68,7 @@ class _AllProductsWidgetState extends State<AllProductsWidget> {
         List<ProductsRecord> allProductsProductsRecordList = snapshot.data!;
 
         return GestureDetector(
-          onTap: () => _model.unfocusNode.canRequestFocus
-              ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-              : FocusScope.of(context).unfocus(),
+          onTap: () => FocusScope.of(context).unfocus(),
           child: Scaffold(
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -259,8 +248,6 @@ class _AllProductsWidgetState extends State<AllProductsWidget> {
                                               .toList();
                                           ;
                                         });
-                                        FFAppState().searchActive = true;
-                                        setState(() {});
                                       },
                                       autofocus: true,
                                       autofillHints: [AutofillHints.name],
@@ -386,145 +373,140 @@ class _AllProductsWidgetState extends State<AllProductsWidget> {
                               17.0, 0.0, 17.0, 0.0),
                           child: Container(
                             width: 380.0,
-                            height: 600.0,
+                            height: 680.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
+                              color: Color(0xFFE4EAD2),
+                              borderRadius: BorderRadius.circular(8.0),
                             ),
-                            child: Visibility(
-                              visible: !FFAppState().searchActive,
-                              child: Builder(
-                                builder: (context) {
-                                  final productsNameSearch =
-                                      allProductsProductsRecordList.toList();
+                            child: Builder(
+                              builder: (context) {
+                                final productsNameSearch =
+                                    allProductsProductsRecordList.toList();
 
-                                  return Wrap(
-                                    spacing: 0.0,
-                                    runSpacing: 0.0,
-                                    alignment: WrapAlignment.start,
-                                    crossAxisAlignment:
-                                        WrapCrossAlignment.start,
-                                    direction: Axis.horizontal,
-                                    runAlignment: WrapAlignment.start,
-                                    verticalDirection: VerticalDirection.down,
-                                    clipBehavior: Clip.none,
-                                    children:
-                                        List.generate(productsNameSearch.length,
-                                            (productsNameSearchIndex) {
-                                      final productsNameSearchItem =
-                                          productsNameSearch[
-                                              productsNameSearchIndex];
-                                      return Card(
-                                        clipBehavior:
-                                            Clip.antiAliasWithSaveLayer,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                        elevation: 4.0,
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        child: Container(
-                                          width: 180.0,
-                                          height: 240.0,
-                                          child: Stack(
-                                            children: [
-                                              Align(
-                                                alignment: AlignmentDirectional(
-                                                    0.0, -1.0),
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 9.0, 0.0, 0.0),
-                                                  child: ClipRRect(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            8.0),
-                                                    child: Image.network(
-                                                      valueOrDefault<String>(
-                                                        productsNameSearchItem
-                                                            .image,
-                                                        'https://i.pinimg.com/originals/7a/49/91/7a499160be81648fa7d062f06f19a2d7.jpg',
-                                                      ),
-                                                      width: 160.0,
-                                                      height: 160.0,
-                                                      fit: BoxFit.cover,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                              Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Flexible(
-                                                    child: Align(
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              0.0, 1.0),
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    0.0,
-                                                                    0.0,
-                                                                    44.0),
-                                                        child: Text(
-                                                          productsNameSearchItem
-                                                              .name,
-                                                          textAlign:
-                                                              TextAlign.center,
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Readex Pro',
-                                                                letterSpacing:
-                                                                    0.0,
-                                                              ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                              Align(
-                                                alignment: AlignmentDirectional(
-                                                    0.0, 1.0),
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(20.0, 0.0, 20.0,
-                                                          13.0),
-                                                  child: Text(
+                                return Wrap(
+                                  spacing: 0.0,
+                                  runSpacing: 0.0,
+                                  alignment: WrapAlignment.start,
+                                  crossAxisAlignment: WrapCrossAlignment.start,
+                                  direction: Axis.horizontal,
+                                  runAlignment: WrapAlignment.start,
+                                  verticalDirection: VerticalDirection.down,
+                                  clipBehavior: Clip.none,
+                                  children:
+                                      List.generate(productsNameSearch.length,
+                                          (productsNameSearchIndex) {
+                                    final productsNameSearchItem =
+                                        productsNameSearch[
+                                            productsNameSearchIndex];
+                                    return Card(
+                                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      elevation: 4.0,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                      ),
+                                      child: Container(
+                                        width: 180.0,
+                                        height: 240.0,
+                                        child: Stack(
+                                          children: [
+                                            Align(
+                                              alignment: AlignmentDirectional(
+                                                  0.0, -1.0),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        0.0, 9.0, 0.0, 0.0),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                  child: Image.network(
                                                     valueOrDefault<String>(
                                                       productsNameSearchItem
-                                                          .price
-                                                          .toString(),
-                                                      '\$20',
+                                                          .image,
+                                                      'https://i.pinimg.com/originals/7a/49/91/7a499160be81648fa7d062f06f19a2d7.jpg',
                                                     ),
-                                                    textAlign: TextAlign.center,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                    width: 160.0,
+                                                    height: 160.0,
+                                                    fit: BoxFit.cover,
                                                   ),
                                                 ),
                                               ),
-                                            ],
-                                          ),
+                                            ),
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Flexible(
+                                                  child: Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.0, 1.0),
+                                                    child: Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
+                                                                  0.0,
+                                                                  44.0),
+                                                      child: Text(
+                                                        productsNameSearchItem
+                                                            .name,
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Readex Pro',
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Align(
+                                              alignment: AlignmentDirectional(
+                                                  0.0, 1.0),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        20.0, 0.0, 20.0, 13.0),
+                                                child: Text(
+                                                  valueOrDefault<String>(
+                                                    productsNameSearchItem.price
+                                                        .toString(),
+                                                    '\$20',
+                                                  ),
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
                                         ),
-                                      );
-                                    }),
-                                  );
-                                },
-                              ),
+                                      ),
+                                    );
+                                  }),
+                                );
+                              },
                             ),
                           ),
                         ),

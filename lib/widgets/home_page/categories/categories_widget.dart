@@ -84,7 +84,7 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
                               width: 30.0,
                               height: 30.0,
                               child: SpinKitFadingCube(
-                                color: Color(0xFF226B1B),
+                                color: Color(0xFF79DD71),
                                 size: 30.0,
                               ),
                             ),

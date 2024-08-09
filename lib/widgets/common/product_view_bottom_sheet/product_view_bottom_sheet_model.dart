@@ -2,13 +2,12 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_count_controller.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'product_view_widget.dart' show ProductViewWidget;
+import 'product_view_bottom_sheet_widget.dart'
+    show ProductViewBottomSheetWidget;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -16,10 +15,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ProductViewModel extends FlutterFlowModel<ProductViewWidget> {
-  ///  State fields for stateful widgets in this page.
+class ProductViewBottomSheetModel
+    extends FlutterFlowModel<ProductViewBottomSheetWidget> {
+  ///  State fields for stateful widgets in this component.
 
-  final unfocusNode = FocusNode();
   // State field(s) for DropDown widget.
   String? dropDownValue1;
   FormFieldController<String>? dropDownValueController1;
@@ -35,7 +34,5 @@ class ProductViewModel extends FlutterFlowModel<ProductViewWidget> {
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {
-    unfocusNode.dispose();
-  }
+  void dispose() {}
 }

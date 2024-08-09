@@ -152,7 +152,7 @@ class _NavBarPageState extends State<NavBarPage> {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.cottage_sharp,
+                Icons.home,
                 size: 26.0,
               ),
               label: 'Home',
@@ -171,7 +171,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 Icons.add_box,
                 size: 40.0,
               ),
-              label: 'New',
+              label: 'Custom',
               tooltip: '',
             ),
             BottomNavigationBarItem(

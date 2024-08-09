@@ -15,7 +15,6 @@ import 'package:provider/provider.dart';
 class HomeModel extends FlutterFlowModel<HomeWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // Model for Banner01 component.
   late Banner01Model banner01Model;
   // Model for NewArrivals component.
@@ -38,7 +37,6 @@ class HomeModel extends FlutterFlowModel<HomeWidget> {
 
   @override
   void dispose() {
-    unfocusNode.dispose();
     banner01Model.dispose();
     newArrivalsModel.dispose();
     productsModel.dispose();

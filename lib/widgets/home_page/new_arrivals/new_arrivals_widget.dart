@@ -1,6 +1,7 @@
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/widgets/common/product_view_bottom_sheet/product_view_bottom_sheet_widget.dart';
 import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -114,7 +115,7 @@ class _NewArrivalsWidgetState extends State<NewArrivalsWidget> {
                                   width: 30.0,
                                   height: 30.0,
                                   child: SpinKitFadingCube(
-                                    color: Color(0xFF226B1B),
+                                    color: Color(0xFF79DD71),
                                     size: 30.0,
                                   ),
                                 ),
@@ -138,15 +139,22 @@ class _NewArrivalsWidgetState extends State<NewArrivalsWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed(
-                                      'ProductView',
-                                      queryParameters: {
-                                        'productDetails': serializeParam(
-                                          rowProductsRecord.reference,
-                                          ParamType.DocumentReference,
-                                        ),
-                                      }.withoutNulls,
-                                    );
+                                    await showModalBottomSheet(
+                                      isScrollControlled: true,
+                                      backgroundColor: Colors.transparent,
+                                      enableDrag: false,
+                                      context: context,
+                                      builder: (context) {
+                                        return Padding(
+                                          padding:
+                                              MediaQuery.viewInsetsOf(context),
+                                          child: ProductViewBottomSheetWidget(
+                                            collectionDetails:
+                                                rowProductsRecord.reference,
+                                          ),
+                                        );
+                                      },
+                                    ).then((value) => safeSetState(() {}));
                                   },
                                   child: Card(
                                     clipBehavior: Clip.antiAliasWithSaveLayer,

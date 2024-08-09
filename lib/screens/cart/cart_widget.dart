@@ -153,7 +153,7 @@ class _CartWidgetState extends State<CartWidget> {
                                       width: 30.0,
                                       height: 30.0,
                                       child: SpinKitFadingCube(
-                                        color: Color(0xFF226B1B),
+                                        color: Color(0xFF79DD71),
                                         size: 30.0,
                                       ),
                                     ),

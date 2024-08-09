@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '/backend/backend.dart';
+import 'backend/api_requests/api_manager.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 
@@ -35,12 +36,6 @@ class FFAppState extends ChangeNotifier {
   set sum(double value) {
     _sum = value;
     prefs.setDouble('ff_sum', value);
-  }
-
-  bool _searchActive = false;
-  bool get searchActive => _searchActive;
-  set searchActive(bool value) {
-    _searchActive = value;
   }
 }
 

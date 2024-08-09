@@ -1,6 +1,7 @@
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/widgets/common/product_view_bottom_sheet/product_view_bottom_sheet_widget.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -118,7 +119,7 @@ class _ProductsWidgetState extends State<ProductsWidget> {
                                   width: 30.0,
                                   height: 30.0,
                                   child: SpinKitFadingCube(
-                                    color: Color(0xFF226B1B),
+                                    color: Color(0xFF79DD71),
                                     size: 30.0,
                                   ),
                                 ),
@@ -142,19 +143,26 @@ class _ProductsWidgetState extends State<ProductsWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed(
-                                      'ProductView',
-                                      queryParameters: {
-                                        'productDetails': serializeParam(
-                                          rowProductsRecord.reference,
-                                          ParamType.DocumentReference,
-                                        ),
-                                      }.withoutNulls,
-                                    );
+                                    await showModalBottomSheet(
+                                      isScrollControlled: true,
+                                      backgroundColor: Colors.transparent,
+                                      enableDrag: false,
+                                      context: context,
+                                      builder: (context) {
+                                        return Padding(
+                                          padding:
+                                              MediaQuery.viewInsetsOf(context),
+                                          child: ProductViewBottomSheetWidget(
+                                            collectionDetails:
+                                                rowProductsRecord.reference,
+                                          ),
+                                        );
+                                      },
+                                    ).then((value) => safeSetState(() {}));
                                   },
                                   child: Card(
                                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: Color(0xFFC9D4AE),
+                                    color: Colors.white,
                                     elevation: 2.0,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8.0),
@@ -220,7 +228,7 @@ class _ProductsWidgetState extends State<ProductsWidget> {
                                             width: 140.0,
                                             height: 53.0,
                                             decoration: BoxDecoration(
-                                              color: Color(0xFFFFFADA),
+                                              color: Color(0xFFF6EBA6),
                                               borderRadius:
                                                   BorderRadius.circular(4.0),
                                             ),

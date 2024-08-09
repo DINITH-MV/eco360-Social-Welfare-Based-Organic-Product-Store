@@ -95,18 +95,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               params.isEmpty ? NavBarPage(initialPage: 'Home') : HomeWidget(),
         ),
         FFRoute(
-          name: 'ProductView',
-          path: '/productView',
-          builder: (context, params) => ProductViewWidget(
-            productDetails: params.getParam(
-              'productDetails',
-              ParamType.DocumentReference,
-              isList: false,
-              collectionNamePath: ['Products'],
-            ),
-          ),
-        ),
-        FFRoute(
           name: 'ProductCollection',
           path: '/productCollection',
           builder: (context, params) => ProductCollectionWidget(
@@ -167,6 +155,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'AllProducts',
           path: '/allProducts',
           builder: (context, params) => AllProductsWidget(),
+        ),
+        FFRoute(
+          name: 'login',
+          path: '/login',
+          builder: (context, params) => LoginWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
