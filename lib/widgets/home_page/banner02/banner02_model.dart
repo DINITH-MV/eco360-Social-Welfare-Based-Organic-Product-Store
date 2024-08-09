@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../../core/flutter_flow_theme.dart';
+import '../../../core/flutter_flow_util.dart';
 import 'banner02_widget.dart' show Banner02Widget;
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
