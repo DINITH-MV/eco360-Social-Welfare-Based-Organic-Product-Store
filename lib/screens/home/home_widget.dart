@@ -1,6 +1,6 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '../../core/flutter_flow_theme.dart';
+import '../../core/flutter_flow_util.dart';
+import '../../core/flutter_flow_widgets.dart';
 import '/widgets/home_page/banner01/banner01_widget.dart';
 import '/widgets/home_page/banner02/banner02_widget.dart';
 import '/widgets/home_page/categories/categories_widget.dart';

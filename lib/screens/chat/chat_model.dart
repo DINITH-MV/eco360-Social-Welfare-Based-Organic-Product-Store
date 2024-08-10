@@ -1,6 +1,6 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '../../core/flutter_flow_theme.dart';
+import '../../core/flutter_flow_util.dart';
+import '../../core/flutter_flow_widgets.dart';
 import 'chat_widget.dart' show ChatWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';

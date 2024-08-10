@@ -1,8 +1,8 @@
 import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
+import '../../core/flutter_flow_icon_button.dart';
+import '../../core/flutter_flow_theme.dart';
+import '../../core/flutter_flow_util.dart';
+import '../../core/flutter_flow_widgets.dart';
 import '/widgets/cart/cart_product_view_card/cart_product_view_card_widget.dart';
 import '/widgets/cart/order_summary/order_summary_widget.dart';
 import 'cart_widget.dart' show CartWidget;
