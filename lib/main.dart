@@ -9,12 +9,12 @@ import 'auth/firebase_auth/firebase_user_provider.dart';
 import 'auth/firebase_auth/auth_util.dart';
 
 import 'backend/firebase/firebase_config.dart';
-import 'core/flutter_flow_theme.dart';
-import 'core/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import 'flutter_flow/flutter_flow_util.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'core/nav/nav.dart';
+import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
 void main() async {
@@ -123,9 +123,9 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'Home': HomeWidget(),
-      'Cart': CartWidget(),
+      'AllProducts': AllProductsWidget(),
       'ProductFabrication': ProductFabricationWidget(),
-      'Chat': ChatWidget(),
+      'Cart': CartWidget(),
       'Profile': ProfileWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -159,11 +159,11 @@ class _NavBarPageState extends State<NavBarPage> {
               tooltip: '',
             ),
             BottomNavigationBarItem(
-              icon: FaIcon(
-                FontAwesomeIcons.shoppingCart,
-                size: 22.0,
+              icon: Icon(
+                Icons.shopping_bag_rounded,
+                size: 30.0,
               ),
-              label: 'Cart',
+              label: 'Products',
               tooltip: '',
             ),
             BottomNavigationBarItem(
@@ -175,11 +175,11 @@ class _NavBarPageState extends State<NavBarPage> {
               tooltip: '',
             ),
             BottomNavigationBarItem(
-              icon: Icon(
-                Icons.chat_bubble_rounded,
-                size: 24.0,
+              icon: FaIcon(
+                FontAwesomeIcons.shoppingCart,
+                size: 22.0,
               ),
-              label: 'Chat',
+              label: 'Cart',
               tooltip: '',
             ),
             BottomNavigationBarItem(

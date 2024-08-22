@@ -1,8 +1,8 @@
-import '../../core/flutter_flow_animations.dart';
-import '../../core/flutter_flow_icon_button.dart';
-import '../../core/flutter_flow_theme.dart';
-import '../../core/flutter_flow_util.dart';
-import '../../core/flutter_flow_widgets.dart';
+import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:math';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
@@ -451,7 +451,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget>
                                                       child: Image.asset(
                                                         'assets/images/photorealistic-portrait-african-woman.jpg',
                                                         width: 292.0,
-                                                        height: 197.0,
+                                                        height: 195.0,
                                                         fit: BoxFit.cover,
                                                       ),
                                                     ),
@@ -487,7 +487,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget>
                                                         child: Image.asset(
                                                           'assets/images/portrait-man-pottery-studio-47427456.jpg',
                                                           width: 112.0,
-                                                          height: 197.0,
+                                                          height: 195.0,
                                                           fit: BoxFit.cover,
                                                         ),
                                                       ),

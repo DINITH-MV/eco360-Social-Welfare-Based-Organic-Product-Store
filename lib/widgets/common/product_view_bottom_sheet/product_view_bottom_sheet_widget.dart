@@ -1,11 +1,11 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '../../../core/flutter_flow_count_controller.dart';
-import '../../../core/flutter_flow_drop_down.dart';
-import '../../../core/flutter_flow_theme.dart';
-import '../../../core/flutter_flow_util.dart';
-import '../../../core/form_field_controller.dart';
-import '../../../core/custom_functions.dart' as functions;
+import '/flutter_flow/flutter_flow_count_controller.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/form_field_controller.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -142,7 +142,7 @@ class _ProductViewBottomSheetWidgetState
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 8.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(40.0, 8.0, 40.0, 0.0),
                       child: Text(
                         columnProductsRecord.description,
                         textAlign: TextAlign.center,
@@ -372,7 +372,7 @@ class _ProductViewBottomSheetWidgetState
                           Align(
                             alignment: AlignmentDirectional(-1.0, 0.0),
                             child: Container(
-                              width: 156.0,
+                              width: 154.0,
                               height: 80.0,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)

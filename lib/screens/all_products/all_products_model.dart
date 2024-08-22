@@ -1,9 +1,9 @@
 import '/backend/backend.dart';
-import '../../core/flutter_flow_autocomplete_options_list.dart';
-import '../../core/flutter_flow_icon_button.dart';
-import '../../core/flutter_flow_theme.dart';
-import '../../core/flutter_flow_util.dart';
-import '../../core/flutter_flow_widgets.dart';
+import '/flutter_flow/flutter_flow_autocomplete_options_list.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'all_products_widget.dart' show AllProductsWidget;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/gestures.dart';

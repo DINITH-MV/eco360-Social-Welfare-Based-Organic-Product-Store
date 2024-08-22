@@ -1,6 +1,6 @@
 import '/backend/backend.dart';
-import '../../../core/flutter_flow_theme.dart';
-import '../../../core/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import '/widgets/common/product_view_bottom_sheet/product_view_bottom_sheet_widget.dart';
 import 'dart:ui';
 import 'new_arrivals_widget.dart' show NewArrivalsWidget;
