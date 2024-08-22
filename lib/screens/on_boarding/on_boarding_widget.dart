@@ -178,9 +178,9 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget>
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              fontSize: 16.0,
+                                              fontSize: 18.0,
                                               letterSpacing: 0.0,
-                                              lineHeight: 1.4,
+                                              lineHeight: 1.5,
                                             ),
                                       ),
                                     ),
@@ -248,7 +248,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget>
                                     alignment: AlignmentDirectional(1.0, 0.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 280.0, 30.0, 0.0),
+                                          0.0, 250.0, 30.0, 0.0),
                                       child: Text(
                                         'Nurturing \nLife on Earth',
                                         textAlign: TextAlign.end,
@@ -269,15 +269,15 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget>
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           65.0, 460.0, 30.0, 0.0),
                                       child: Text(
-                                        'Our products are designed to care for both you and the planet. Experience the benefits of organic living ',
+                                        'Our products are designed to care for both you and the planet. Experience the benefits of \norganic living ',
                                         textAlign: TextAlign.end,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              fontSize: 16.0,
+                                              fontSize: 18.0,
                                               letterSpacing: 0.0,
-                                              lineHeight: 1.3,
+                                              lineHeight: 1.4,
                                             ),
                                       ),
                                     ),
@@ -334,7 +334,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget>
                                     alignment: AlignmentDirectional(0.0, 1.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 100.0),
+                                          0.0, 0.0, 0.0, 130.0),
                                       child: Container(
                                         width: double.infinity,
                                         height: 420.0,
@@ -505,7 +505,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget>
                                     alignment: AlignmentDirectional(-1.0, -1.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          30.0, 40.0, 0.0, 0.0),
+                                          30.0, 50.0, 0.0, 0.0),
                                       child: Text(
                                         'Empower Lives, Sustain the Future',
                                         textAlign: TextAlign.start,
@@ -524,7 +524,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget>
                                     alignment: AlignmentDirectional(-1.0, -1.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          30.0, 140.0, 80.0, 0.0),
+                                          30.0, 150.0, 80.0, 0.0),
                                       child: Text(
                                         'Your choice supports more than just your health,  uplifts communities and contributes to the UN SDGs.',
                                         textAlign: TextAlign.start,
@@ -532,9 +532,9 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget>
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              fontSize: 16.0,
+                                              fontSize: 18.0,
                                               letterSpacing: 0.0,
-                                              lineHeight: 1.4,
+                                              lineHeight: 1.5,
                                             ),
                                       ),
                                     ),
@@ -543,7 +543,7 @@ class _OnBoardingWidgetState extends State<OnBoardingWidget>
                                     alignment: AlignmentDirectional(1.0, 1.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 30.0, 10.0),
+                                          0.0, 0.0, 30.0, 30.0),
                                       child: FFButtonWidget(
                                         onPressed: () async {
                                           context.pushNamed(
