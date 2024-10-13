@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1082295340695",
+    "project_id": "e-c-o360-store-s9ahm7",
+    "storage_bucket": "e-c-o360-store-s9ahm7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082295340695:android:aceff44ac572bbb61023d2",
+        "android_client_info": {
+          "package_name": "com.mycompany.eco360store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI7A2fhczaz9p-W1LinOBuUyGeDM0__qs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
